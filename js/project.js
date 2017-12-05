@@ -34,7 +34,7 @@ $(document).ready(function () {
 
 	// Retrieves Wish List data via Amazon Wish Lister API by Justin Scarpetti, formats and inserts data onto page
 	function getItems (ID, country, sort, filter) {
-		$.getJSON('http://wishy-watchy.com/amazon/src/wishlist.php?id=' + ID + '&tld=' + country + '&sort=' + sort + '&reveal=' + filter, function( data ) {
+		$.getJSON('http://robf1011.github.io/wishy-watchy/amazon/src/wishlist.php?id=' + ID + '&tld=' + country + '&sort=' + sort + '&reveal=' + filter, function( data ) {
 			$('section').empty()
 			if (data == null) {
 				$('section').append('<div class="full-text"><h2>No Wish List items found!</h2></div>')
@@ -91,7 +91,7 @@ $(document).ready(function () {
 		var country = $('#country').val()
 		var sort = $('#sort').val()
 		var filter = $('#filter').val()
-		var url = 'http://wishy-watchy.com/?id=' + wishlistID + '&tld=' + country + '&sortby=' + sort + '&filterby=' + filter
+		var url = 'http://robf1011.github.io/wishy-watchy/?id=' + wishlistID + '&tld=' + country + '&sortby=' + sort + '&filterby=' + filter
 		$(location).attr('href', url )
 		// var wishlistID = $('#amazon_id').val()
 		// getItems(wishlistID)
